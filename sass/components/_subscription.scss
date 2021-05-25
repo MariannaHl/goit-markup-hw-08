@@ -1,0 +1,90 @@
+.subscription {
+  display: flex;
+  width: 305px;
+  justify-content: center;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    justify-content: center;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 570px;
+    align-items: flex-end;
+    margin-left: 93px;
+    margin-top: 0px;
+  }
+}
+.subscription__div {
+  display: block;
+}
+.subscriprion__email-input {
+  width: 290px;
+  height: 50px;
+  padding: 15px 16px;
+  color: var(--main-white-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  margin-bottom: 20px;
+
+  transition: border-color var(--animation), outline var(--animation);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0px;
+  }
+
+  &:focus {
+    border-color: var(--accent-color);
+    outline: var(--accent-color);
+  }
+}
+
+.sub-container__div {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: flex-end;
+    height: 86px;
+  }
+}
+
+// .sub-container__subs {
+//   width: ;
+// }
+
+.subscriprion__sign-btn {
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--main-white-color);
+
+  width: 200px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent-color);
+  border-color: transparent;
+  border-radius: 4px;
+  margin-left: 12px;
+}
+
+.subscriprion__sign-svg {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  margin-left: 10px;
+}

@@ -1,0 +1,112 @@
+.team-section {
+  background-color: var(--team-bgcolor);
+
+  &__heading {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.team-section__member {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.team-section__names {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  margin-bottom: 10px;
+}
+.team-section__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-section__description {
+  background-color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
+}
+.team-section__paragraph {
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  line-height: 1.19;
+
+  margin-bottom: 16px;
+}
+.team-section__member:not(:first-child) {
+  margin-left: 30px;
+}
+.team-section__images-item {
+  border-width: 0px;
+  border-color: transparent;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
+// .team-section__img {
+//   @media screen and (max-width: 766px) {
+//     width: 450px;
+//     height: 460px;
+//   }
+
+//   @media screen and (min-width: 768px), (max-width: 1198px) {
+//     width: 354px;
+//     height: 374px;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     width: 270px;
+//     height: 260px;
+//   }
+// }
+
+.social-icons {
+  display: inline-flex;
+}
+.social-icons__svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--icons-color);
+
+  transition: fill var(--animation);
+}
+
+.social-icons__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+
+    .social-icons__svg {
+      fill: var(--main-white-color);
+    }
+  }
+}
+
+.social-icons__item:not(:first-child) {
+  margin-left: 10px;
+}

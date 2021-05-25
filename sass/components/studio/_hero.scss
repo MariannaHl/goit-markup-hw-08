@@ -1,0 +1,104 @@
+.top-section {
+  background-color: var(--main-dark-bgcolor);
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../../../images/hero/hero-phone.jpg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .top-section {
+      background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../../images/hero/hero-phone@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../../images/hero/hero-tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .top-section {
+        background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../../../images/hero/hero-tablet@2x.jpg);
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../../images/hero/hero.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .top-section {
+        background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../../../images/hero/hero@2x.jpg);
+      }
+    }
+  }
+}
+
+.top-section__title {
+  color: var(--main-white-color);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.top-section__button {
+  background-color: var(--accent-color);
+  color: var(--main-white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  display: block;
+  border-width: 0px;
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-section__container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 480px) {
+    width: 360px;
+    // height: 84px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 360px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+  }
+}

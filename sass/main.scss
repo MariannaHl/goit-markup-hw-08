@@ -1,0 +1,21 @@
+@import './utils/variables';
+
+@import './base/common';
+
+@import './components/header';
+@import './components/logo';
+@import './components/navigation';
+@import './components/contacts';
+@import './components/links';
+@import './components/footer';
+@import './components/subscription';
+
+@import './components/studio/hero';
+@import './components/studio/features';
+@import './components/studio/activities';
+@import './components/studio/team';
+@import './components/studio/clients';
+@import './components/studio/modal';
+
+@import './components/portfolio/filter';
+@import './components/portfolio/portfolio';

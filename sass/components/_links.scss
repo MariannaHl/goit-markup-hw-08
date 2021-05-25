@@ -1,0 +1,11 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+
+  transition: color var(--animation);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
