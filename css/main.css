@@ -85,6 +85,14 @@ ul {
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .header .container {
+    height: 80px;
+  }
 }
 
 .logo {
@@ -118,6 +126,16 @@ ul {
   color: var(--main-white-color);
 }
 
+.nav-section {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-section {
+    display: inline-flex;
+  }
+}
+
 .nav-section .link {
   color: var(--primary-text-color);
   font-size: 14px;
@@ -147,10 +165,15 @@ ul {
   position: absolute;
   width: 100%;
   height: 4px;
-  bottom: -1px;
   background-color: var(--accent-color);
   margin-top: 28px;
   border-radius: 2px;
+}
+
+@media screen and (min-width: 1200px) {
+  .current::after {
+    bottom: -1px;
+  }
 }
 
 .contact__svg {
@@ -159,8 +182,35 @@ ul {
 }
 
 .header .contact-details {
-  display: flex;
-  margin-left: auto;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header .contact-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .contact-details {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact__items:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__items:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
 .contact-details .link {
@@ -173,8 +223,10 @@ ul {
   align-items: center;
 }
 
-.contact__items + .contact__items {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contact__items + .contact__items {
+    margin-left: 50px;
+  }
 }
 
 .link {
@@ -428,6 +480,117 @@ ul {
   margin-left: 10px;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 0px;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 40px;
+  z-index: 98;
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu.is-open {
+  top: 0px;
+  left: 0px;
+}
+
+.mobile-menu__btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 99;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu__btn {
+    display: none;
+  }
+}
+
+.mobile-menu__btn.is-open .menu-btn__icon-open {
+  display: none;
+}
+
+.mobile-menu__btn:hover, .mobile-menu__btn:focus {
+  fill: var(--accent-color);
+}
+
+.menu-btn__icon-close {
+  display: none;
+  top: 0;
+}
+
+.is-open .menu-btn__icon-close {
+  display: block;
+}
+
+.menu-btn__icon {
+  width: 24px;
+  height: 16px;
+}
+
+.mobile-menu__item {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  margin-bottom: 35.7px;
+}
+
+.mobile-menu__item:last-child {
+  margin-bottom: 305px;
+}
+
+.mobile-menu__item:hover,
+.mobile-menu__item:focus {
+  color: var(--accent-color);
+  transition: color var(--animation);
+}
+
+.tel-link {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-bottom: 32px;
+}
+
+.mail-link {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  margin-bottom: 64px;
+}
+
+.mobile-menu__socials {
+  display: flex;
+  width: 357px;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
 .top-section {
   background-color: var(--main-dark-bgcolor);
   padding-top: 118px;
@@ -675,8 +838,29 @@ ul {
   margin-bottom: 50px;
 }
 
+.team-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(30px * -1);
+  margin-left: calc(30px * -1);
+}
+
 .team-section__member {
+  margin-top: 30px;
+  margin-left: 30px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  .team-section__member {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-section__member {
+    flex-basis: calc((100% - 120px) / 4);
+  }
 }
 
 .team-section__names {
@@ -684,11 +868,6 @@ ul {
   font-size: 16px;
   line-height: 1.19;
   margin-bottom: 10px;
-}
-
-.team-section__list {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .team-section__description {
