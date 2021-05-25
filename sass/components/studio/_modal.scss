@@ -22,12 +22,17 @@
 
   padding: 40px;
 
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #fff;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -146,9 +151,14 @@
 
   margin-bottom: 30px;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: var(--primary-letter-spacing);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal__checkbox-label::before {
   content: '';
