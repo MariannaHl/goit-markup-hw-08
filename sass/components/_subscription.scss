@@ -51,16 +51,18 @@
 }
 
 .sub-container__div {
+  margin-bottom: -60px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: flex-end;
     height: 86px;
   }
 }
-
-// .sub-container__subs {
-//   width: ;
-// }
 
 .subscriprion__sign-btn {
   font-size: 16px;

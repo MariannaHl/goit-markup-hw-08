@@ -40,8 +40,13 @@
   right: 0px;
   left: 0px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) {
   .activities-section {
     display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    .activities-section {
+      display: block;
+    }
   }
 }
