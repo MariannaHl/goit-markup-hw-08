@@ -1448,6 +1448,8 @@ ul {
 
 @media screen and (min-width: 768px) {
   .portfolio-flex__item {
+    display: flex;
+    flex-direction: column;
     flex-basis: calc((100%) / 2);
   }
 }
@@ -1455,6 +1457,14 @@ ul {
 @media screen and (min-width: 1200px) {
   .portfolio-flex__item {
     flex-basis: calc((100%) / 3);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-flex__img-name {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
